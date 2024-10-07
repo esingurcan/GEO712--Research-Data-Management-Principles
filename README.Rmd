@@ -1,0 +1,83 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Week 4
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of Week 4 is to create a Project Plan:
+
+# Project Data Analysis
+In this assignment, I will talk about my completed study.
+
+1. List the data that you expect to use, collect or create in your project. Identify if you are generating or collecting the data and if you are using existing datasets?
+- In this project, I will use data from a longitudinal study that had some data collected before I began working on it, as well as additional data I collected last year. This data comes from a study in which we tested the social development of children at increased risk for autism, as well as those without such a risk.
+
+2. Are there legal or ethical restrictions that you will need to address?
+- No, we already received a clearance from MREB.
+
+3. Go through the Quick Hits for Data Management and identify possible strategies to build and protect the value of your data.
+- The first thing I do with my data is lock the raw data after transferring it to the Excel sheet I will use. Then, I prefer using the data as a CSV file with R so that I always have the CSV version. I also save copies of the raw data in case anything happens, then I transfer the raw data to our lab hard drives and Mac drive to ensure we do not lose the data. We always keep the raw data in a folder under our project name and ensure that the folder names make sense, using a format like initials-year-project_name. There is actually no standard naming procedure for the data I am working with; I usually follow the literature abbreviations and explain what each abbreviation represents in the data dictionary.
+
+4. Where will you keep raw data and how will you back it up?
+- There is a data management system in our lab, and we have a specific procedure for this study. Since it is a longitudinal study, we do not want to lose any data. After transferring the raw data to the sheet for cleaning and processing, we lock the raw data We also keep the raw data securely on password-protected lab computers and frequently back up our data to the lab's hard drives.
+
+5. What file formats do you anticipate your data will be in? Are the formats open or can they be converted to open formats?
+- We usually process the data in XLS format, but share and analyze the CSV versions of the data. From what I’ve observed in my literature, CSV is a common format for sharing data openly.
+
+6. Create a File naming convention for your project data
+- We also have a file naming system in our lab, which I will use for this project. It is Year Project Started-Your Initials-Project # for that year. So mine would be 2024-EG-2. We usually put all the information in that folder, but for open practices, my plan is:
+
+*Manuscript for my lab record/to my supervisor*
+- 2024-EG-2-tom-autism (Tom (theory of mind) is the project name, and autism is the journal name)
+
+*Data for open science*: publication year-my initials-other author's initials-project name-journal-data 
+- 2024-EG-MDR-tom-autism-data.csv
+
+*R file name for open science*: publication year-my initials-other author's initials-project name-journal-analysis
+- 2024-EG-MDR-tom-autism-analysis.Rmd
+
+All the analyses and versions go with v1, v2, and so forth, along with the comments on the updates. I am planning to share this data on OSF; however, after this class, especially for the version control feature, GitHub seems like a better option.
+
+7. What standards are relevant to your project? List any existing standards or best practices in use in your field or in your lab? This could include instrument procedures or file management standards. What standards might you want to create to help you manage your data?
+- We have a data archival guide in my lab. This guide includes the following steps:
+1. When we are ready for submission, my supervisor sends us a MacDrive link.
+2. Then, we create a folder, and each folder should have a code. The code is as follows: Year Project Started-Your Initials-Project # for that year.
+3. We have three main folders: a Raw Data folder, a Processed Data folder, and an Analysis folder.
+4. For R scripts/markdowns, we also create three folders: 1) a folder that includes the R code we use to process data from
+the raw data, 2) Data Analysis folder as a separate one from the raw data folder, and 3) Figures folder that includes the codes we used to make figures and save the figures separately in that folder.
+
+* When we create our R files, we always add our name, email, and other contact information at the top of the script.
+* We write the date the script was updated, as updating it in each version acts as a form of manual version control.
+* Additionally, we add as many comments as possible to clarify the code we write.
+* If we need to conduct further analysis during the publication process, we create a new folder and label it as "published data".
+
+8. List possible strategies you might use to document your data throughout your project.
+- We have lab computers where we store the data (+ harddrive and a macdrive), and I always create Excel sheet guidelines for those who don't know how to access/manage the data. For example, we specify that if you look at the processed data, you should check [this] folder, and if you need the recruitment files, you should look at [this] folder, etc. We try to make it as clear as possible so that anyone who has no knowledge of the project can still manage to find the information they need. We also include our contact information, both our McMaster email and personal email, so that even after we leave McMaster, they can reach out to us with any questions.
+
+- I write down the names of the students who worked on a specific project and the tasks. For example, we wrote the examiner, and also who helped with data organization, etc. This way, if anyone has a question, they can also ask the student who worked on the data.
+
+- We have Excel sheets that separate each assessment and clearly indicate which age group is associated with each assessment. We also have a manual about this study that defines all the assessments we conduct, the reasons for conducting them, relevant literature, citations, and updates, such as changes to the assessment methods, along with the year of the change and the reason for it. Additionally, I prefer to create a data dictionary that helps me and anyone who needs my data to understand the abbreviations of the columns, the descriptions of the data, variables, variable types, ranges of the data, etc.
+
+- The information on when and where the data was collected is always up-to-date for us. We consistently add timestamps, the names of the people who did the recruitment, and important notes about that particular data. 
+
+- In our manual, we also discuss the reasons for using specific methodologies. In R Markdown, we try to comment on everything and explain our reasoning behind the data analysis methods used, along with our purposes for that data. My new aim, after completing all these steps, is to make the data more accessible by using the data dictionary alongside the data and sharing it with my code on open science platforms such as OSF and GitHub.
+
+## Transfer to Git
+```{r}
+library(usethis)
+usethis::use_git()
+usethis::use_github()
+```
+
